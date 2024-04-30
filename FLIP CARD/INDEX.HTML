@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main
+        {
+            height: 500px;
+            width: 500px;
+            perspective: 800px;
+            margin: 150px auto;
+        }
+        .container
+        {
+            height: 100%;
+            width: 100%;
+            transition: transform 0.5s;
+            transform-style:preserve-3d;
+        }
+        .main:hover .container 
+        {
+            transform: rotateY(180deg);
+        }
+        .front,.back 
+        {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            backface-visibility: hidden;
+        }
+        .front 
+        {
+            background-color: aqua;
+            color: black;
+        }
+        .back 
+        {
+            background-color: rgb(247, 44, 78);
+            color: white;
+            transform:rotateY(180deg);
+            text-align: center;
+            
+        }
+        h1
+        {
+            text-align: left;
+            padding-left: 20px;
+        }
+        p
+        {
+            text-align: justify;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="front">
+                <img src="image/download.jfif" alt="" style="height: 100%; width: 100%;">
+            </div>
+            <div class="back">
+                <h1>ALEX GAMIT</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima eum, odio laudantium corrupti a repudiandae? Porro, quidem nesciunt modi possimus error quas autem doloribus, aperiam voluptatem quam blanditiis? Tempora, maiores?Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure repudiandae accusamus temporibus reiciendis impedit, iste blanditiis laudantium, inventore repellendus quaerat itaque earum aliquid ullam libero cupiditate aspernatur quam atque totam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo at voluptas quibusdam porro commodi, deserunt, eaque nulla quam temporibus est quasi soluta aliquam tenetur beatae natus velit. Eaque, similique nam!
+
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
